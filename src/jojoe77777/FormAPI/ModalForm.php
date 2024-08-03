@@ -23,6 +23,14 @@ class ModalForm extends Form {
         $this->data["button2"] = "";
     }
 
+    public function processData(&$data) : void {
+        if(!is_bool($data)) {
+            ## removing throw custom error
+            $data = false;
+//            throw new FormValidationException("Expected a boolean response, got " . gettype($data))
+        }
+    }
+
     /**
      * @param string $title
      */
