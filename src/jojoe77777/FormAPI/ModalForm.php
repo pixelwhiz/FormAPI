@@ -25,7 +25,8 @@ class ModalForm extends Form {
 
     public function processData(&$data) : void {
         if(!is_bool($data)) {
-            throw new FormValidationException("Expected a boolean response, got " . gettype($data));
+            ## Disable custom error when press ESC for windows or desktop player!
+//            throw new FormValidationException("Expected a boolean response, got " . gettype($data));
         }
     }
 
